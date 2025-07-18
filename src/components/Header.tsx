@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Code2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logoHeader from '@/assets/logo-outline.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,7 +40,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img className="h-[3.2rem]  opacity-75 p-1" src="/src/assets/logo-outline.png"></img>
+            <img className="h-[3.2rem]  opacity-75 p-1" src={logoHeader}></img>
           </div>
 
           {/* Desktop Navigation */}
