@@ -39,7 +39,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img className="h-[3rem] bg-[#853a179d] border border-orange-800 rounded-lg opacity-75 p-1" src="/src/assets/logo-footer.png"></img>
+            <img className="h-[3.2rem]  opacity-75 p-1" src="/src/assets/logo-outline.png"></img>
           </div>
 
           {/* Desktop Navigation */}

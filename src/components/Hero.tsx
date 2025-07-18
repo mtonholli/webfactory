@@ -1,8 +1,20 @@
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-bg.jpg';
 
 const Hero = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 20);
+      };
+
+          window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollToModelos = () => {
     const element = document.querySelector('#modelos');
     if (element) {
@@ -66,7 +78,9 @@ const Hero = () => {
       </div>
       
       {/* Floating Animation */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float">
+      <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float ${
+      isScrolled ? 'opacity-0' : 'opacity-100'
+    }`}>
         <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
         </div>
