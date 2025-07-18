@@ -33,16 +33,13 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-background/95 backdrop-blur-md shadow-card' : 'bg-transparent'
+      isScrolled ? 'bg-background/65 backdrop-blur-md shadow-card' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-orange rounded-lg flex items-center justify-center">
-              <Code2 className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold text-foreground">WebCrafter</span>
+            <img className="h-[3rem] bg-[#853a179d] border border-orange-800 rounded-lg opacity-75 p-1" src="/src/assets/logo-footer.png"></img>
           </div>
 
           {/* Desktop Navigation */}
