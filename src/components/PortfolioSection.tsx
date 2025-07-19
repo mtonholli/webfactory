@@ -57,7 +57,7 @@ const PortfolioSection = () => {
   };
 
   return (
-    <section id="portfolio" className="py-20 bg-gradient-to-b from-muted/5 to-background">
+    <section id="portfolio" className="  py-20 bg-gradient-to-b from-muted/5 to-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -68,20 +68,25 @@ const PortfolioSection = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="relative">
-            <Card className="bg-gradient-card border-border/50 overflow-hidden">
-              <CardContent className="p-0">
-                <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className=" transition-all duration-500 max-w-4xl mx-auto">
+          <div className=" transition-all duration-500 relative">
+            <Card className=" transition-all bg-gradient-card border-border/50 overflow-hidden">
+              <CardContent className="transition-all duration-500 p-0">
+                <div className="transition-all duration-500 grid grid-cols-1 md:grid-cols-2">
                   {/* Image */}
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={projects[currentSlide].image}
-                      alt={projects[currentSlide].title}
-                      className="w-full h-64 md:h-80 object-cover"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-primary/90 text-white px-3 py-1 rounded-full text-sm">
+                  <div className="relative overflow-hidden ">
+                    {projects.map((project, i) => (
+                      <img 
+                           src={project.image}
+                           alt={project.title}
+                           className={`
+                           absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out
+                           ${i === currentSlide ? 'opacity-100 z-10': 'opacity-0 z-0'} 
+                            `}
+                            /> 
+                    ))}
+                    <div className="  absolute top-4 left-4">
+                      <span className="bg-primary/90 text-white px-3 py-1 rounded-full text-sm  " >
                         {projects[currentSlide].category}
                       </span>
                     </div>
