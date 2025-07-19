@@ -33,7 +33,7 @@ const ServicesSection = () => {
     {
       icon: Link,
       title: 'Bio Personalizada',
-      description: 'Link na bio estilizado para organizar todos seus links.',
+      description: 'Bio estilizada para organizar todos seus links, contatos e mídias sociais.',
       features: ['Links organizados', 'Estatísticas', 'Personalização', 'Fácil edição']
     },
     {
@@ -62,13 +62,13 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="group bg-gradient-card border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-card hover:-translate-y-1"
+              className=" self-end bg-gradient-card border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-card hover:-translate-y-1"
             >
-              <CardHeader className="text-center">
+              <CardHeader className=" h-52 text-center">
                 <div className="w-16 h-16 bg-gradient-orange rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
@@ -81,9 +81,9 @@ const ServicesSection = () => {
               </CardHeader>
               
               <CardContent>
-                <div className="space-y-3 mb-6">
+                <div className=" h-full space-y-5 mb-5">
                   {service.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center text-sm text-muted-foreground">
+                    <div key={featureIndex} className=" h-15 flex items-center text-sm text-muted-foreground">
                       <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
                       {feature}
                     </div>
@@ -92,7 +92,7 @@ const ServicesSection = () => {
                 
                 <Button 
                   variant="outline" 
-                  className="w-full border-primary/30 hover:bg-primary/10 hover:border-primary transition-all duration-300"
+                  className="relative bottom-0 w-full border-primary/30 hover:bg-primary/10 hover:border-primary transition-all duration-300"
                 >
                   Saiba Mais
                   <ArrowRight className="w-4 h-4 ml-2" />
