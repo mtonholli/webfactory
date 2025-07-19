@@ -75,12 +75,7 @@ const ModelsSection = () => {
                   alt={model.name}
                   className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
-                  <Button size="sm" className="bg-gradient-orange">
-                    <Eye className="w-4 h-4 mr-2" />
-                    Ver Exemplo
-                  </Button>
-                </div>
+             
               </div>
               
               <CardHeader>
@@ -106,8 +101,9 @@ const ModelsSection = () => {
                   variant="outline" 
                   className="w-full border-primary/30 hover:bg-primary/10 hover:border-primary transition-all duration-300"
                 >
-                  Escolher Modelo
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  Ver exemplo
+                  <Eye className="w-4 h-4 mr-2" />
+                  
                 </Button>
               </CardContent>
             </Card>
