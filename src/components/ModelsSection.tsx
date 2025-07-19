@@ -75,7 +75,6 @@ const ModelsSection = () => {
                   alt={model.name}
                   className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-             
               </div>
               
               <CardHeader>
@@ -102,8 +101,7 @@ const ModelsSection = () => {
                   className="w-full border-primary/30 hover:bg-primary/10 hover:border-primary transition-all duration-300"
                 >
                   Ver exemplo
-                  <Eye className="w-4 h-4 mr-2" />
-                  
+                  <Eye className="w-4 h-4 mr-2" />       
                 </Button>
               </CardContent>
             </Card>

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight, ExternalLink, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import templateLanding from '@/assets/template-landing.jpg';
+import templateLanding from '@/assets/SoftMig-template-reduzido.png';
 import templatePortfolio from '@/assets/template-portfolio.jpg';
 import templateInstitutional from '@/assets/template-institutional.jpg';
 
@@ -12,11 +12,11 @@ const PortfolioSection = () => {
   const projects = [
     {
       id: 1,
-      title: 'Restaurante Sabores',
-      category: 'Cardápio Digital',
+      title: 'Mig Control',
+      category: 'Sistemas e equipamentos de acesso',
       image: templateLanding,
-      description: 'Cardápio digital interativo com sistema de pedidos online',
-      testimonial: 'Aumentamos as vendas em 40% após o lançamento do cardápio digital!',
+      description: 'Página de vendas e apresentação de equipamentos e sistemas de controle de acesso e ponto eletrônico.',
+      testimonial: 'Entrega rápida e eficiente. Atendeu a todas as minhas expectativas!!',
       client: 'Maria Silva, Proprietária'
     },
     {
