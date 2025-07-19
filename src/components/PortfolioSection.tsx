@@ -70,13 +70,14 @@ const PortfolioSection = () => {
 
         <div className=" transition-all duration-500 max-w-4xl mx-auto">
           <div className=" transition-all duration-500 relative">
-            <Card className=" transition-all bg-gradient-card border-border/50 overflow-hidden">
+            <Card className=" transition-all bg-gradient-card border-border/50 ">
               <CardContent className="transition-all duration-500 p-0">
                 <div className="transition-all duration-500 grid grid-cols-1 md:grid-cols-2">
                   {/* Image */}
-                  <div className="relative overflow-hidden ">
+                  <div className="relative overflow-visible">
                     {projects.map((project, i) => (
                       <img 
+                          key={project.id}
                            src={project.image}
                            alt={project.title}
                            className={`
@@ -85,8 +86,8 @@ const PortfolioSection = () => {
                             `}
                             /> 
                     ))}
-                    <div className="  absolute top-4 left-4">
-                      <span className="bg-primary/90 text-white px-3 py-1 rounded-full text-sm  " >
+                    <div className="  absolute top-4 left-4 w-fullgit">
+                      <span className=" absolute z-10 bg-primary/90 text-white px-3 py-1 rounded-full text-sm  " >
                         {projects[currentSlide].category}
                       </span>
                     </div>
@@ -133,7 +134,7 @@ const PortfolioSection = () => {
             <Button
               variant="outline"
               size="icon"
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm border-primary/30 hover:bg-primary/10"
+              className="absolute z-20 left-4 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm border-primary/30 hover:bg-primary/10"
               onClick={prevSlide}
             >
               <ChevronLeft className="w-4 h-4" />
@@ -142,7 +143,7 @@ const PortfolioSection = () => {
             <Button
               variant="outline"
               size="icon"
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm border-primary/30 hover:bg-primary/10"
+              className="absolute z-10 right-4 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm border-primary/30 hover:bg-primary/10"
               onClick={nextSlide}
             >
               <ChevronRight className="w-4 h-4" />
