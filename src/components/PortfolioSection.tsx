@@ -87,7 +87,7 @@ const PortfolioSection = () => {
                             /> 
                     ))}
                     <div className="  absolute top-4 left-4 w-fullgit">
-                      <span className=" absolute z-10 bg-primary/90 text-white px-3 py-1 rounded-full text-sm  " >
+                      <span className=" absolute z-10 w-max bg-primary/90 text-white px-3 py-1 rounded-full text-sm  " >
                         {projects[currentSlide].category}
                       </span>
                     </div>
