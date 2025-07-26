@@ -1,7 +1,7 @@
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/hero-bg.jpg';
+import heroImage from '@/assets/hero-bg.gif';
 
 const Hero = () => {
   const [isScrolled, setIsScrolled] = useState(false);
